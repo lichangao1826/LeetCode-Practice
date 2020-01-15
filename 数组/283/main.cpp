@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// 283. Move Zeroes
+// 283. 移动零
 // https://leetcode-cn.com/problems/move-zeroes/
 //
 // 时间复杂度: O(n)
