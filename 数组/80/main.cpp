@@ -10,8 +10,18 @@ using namespace std;
 // 空间复杂度: O(1)
 class Solution {
 public:
-    int removeDuplicates(vector<int> &nums) {
-        // TODO
+    int removeDuplicates(vector<int>& nums) {
+        int i = 0;
+
+        // 保证第 i 个位置为下次要被覆盖的位置
+        // 最长保留两个重复元素
+        // 只需比较 nums[i] 和 nums[i - 2]
+        for (int num: nums) {
+            if (i < 2 || num > nums[i - 2]) {
+                nums[i++] = num;
+            }
+        }
+        return i;
     }
 };
 
